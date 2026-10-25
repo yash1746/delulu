@@ -3,8 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { db } from '../firebase';
 import { collection, addDoc, query, orderBy, onSnapshot, serverTimestamp } from 'firebase/firestore';
-import { useAuth } from '../AuthContext';
-import { DEFAULT_SECRET_TRIGGER_PREFIX, DEFAULT_SECRET_TRIGGER_SUFFIX, IN_PLACE_SWAP_EXIT_COMMAND, DISGUISED_NOTIFICATION_MESSAGES } from '../../shared/src/constants';
+import { DEFAULT_SECRET_TRIGGER_PREFIX, DEFAULT_SECRET_TRIGGER_SUFFIX, IN_PLACE_SWAP_EXIT_COMMAND, DISGUISED_NOTIFICATION_MESSAGES } from '@delulu/shared';
 
 const Chat = () => {
   const { conversationId } = useParams();
